@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="apd"/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-15 03:47:45 AM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBUFRPUC1MUEdLMlI4SDsyMDI2LTA5LTE0OzA0OjMwOjI0IFBNOzI4MTk="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBUFRPUC1MUEdLMlI4SDsyMDI2LTA5LTE1OzAzOjQ3OjQ1IEFNOzE0OzI5NzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="saldo, tarif, golongan, kurang, sisa" type="Integer" array="False" size=""/>
+            <assign variable="tarif" expression="0"/>
+            <output expression="&quot;Masukkan saldo e-toll anda (Rp):&quot;" newline="True"/>
+            <input variable="saldo"/>
+            <output expression="&quot;Masukkan golongan  kendaraan (1 = mobil, 2 = truk):&quot;" newline="True"/>
+            <input variable="golongan"/>
+            <if expression="golongan == 1">
+                <then>
+                    <assign variable="tarif" expression="75000"/>
+                </then>
+                <else>
+                    <if expression="golongan == 2">
+                        <then>
+                            <assign variable="tarif" expression="125000"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Golongan tidak valid&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="tarif &gt; 0">
+                <then>
+                    <if expression="saldo &gt;= tarif">
+                        <then>
+                            <assign variable="sisa" expression="saldo - tarif"/>
+                            <output expression="&quot;Saldo mencukupi. Sisa saldo anda Rp &quot; &amp; sisa &amp; &quot;. Palang akan segera terbuka. Selamat melanjutkan perjalanan anda!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="kurang" expression="tarif - saldo"/>
+                            <output expression="&quot;Saldo tidak mencukupi. Anda kekurangan Rp &quot; &amp; kurang &amp; &quot;. Palang tetap tertutup. Silahkan isi saldo terlebih dahulu!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
