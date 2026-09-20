@@ -12,7 +12,7 @@ total_harga_makanan = (
 
 total_bayar = total_harga_makanan + biaya_aplikasi
 rata_rata = total_bayar / len(harga_makanan)
-nim = 32
+nim = 37
 boolean = nim != rata_rata
 
 idr_ke_euro = total_bayar / 17000
