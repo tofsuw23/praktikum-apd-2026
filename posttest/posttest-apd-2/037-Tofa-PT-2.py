@@ -13,14 +13,14 @@ total_harga_makanan = (
 total_bayar = total_harga_makanan + biaya_aplikasi
 rata_rata = total_bayar / len(harga_makanan)
 nim = 37
-boolean = nim != rata_rata
+bolean = nim != rata_rata
 
-idr_ke_euro = total_bayar / 17000
+idr_ke_euro = total_bayar / 20400
 
-print("Biaya aplikasi: Rp." + str(biaya_aplikasi))
-print("Total Bayar (IDR): Rp." + str(total_bayar))
-print("Total Bayar (Euro): €" + str(idr_ke_euro))
-print("Nim: " + str(nim))
-print("Rata-rata: Rp." + str(rata_rata))
-print("Boolean: " + str(boolean))
-print("Harga makanan: " + str(harga_makanan[-6:]))
+print("biaya aplikasi: Rp" + str(biaya_aplikasi))
+print("total Bayar (IDR): Rp" + str(total_bayar))
+print("total Bayar (Euro): €" + str(idr_ke_euro))
+print("nim: " + str(nim))
+print("rata-rata: Rp" + str(rata_rata))
+print("bolean: " + str(bolean))
+print("harga makanan: " + str(harga_makanan[-6:]))
