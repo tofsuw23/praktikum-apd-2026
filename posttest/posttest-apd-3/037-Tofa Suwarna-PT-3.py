@@ -1,9 +1,9 @@
 print("----- ^-^ SELAMAT DATANG DI ANGKASA ^-^ -----")
 
-nama=input("Masukkan Nama Anda: ")
-nim=input("Masukkan NIM Anda: ")
+nama = input("Masukkan Nama Anda: ")
+nim = input("Masukkan NIM Anda: ")
 
-if nama == "Tofa Suwarna" and nim == ("37"): 
+if nama == "Tofa Suwarna" and nim == ("37"):
     print(" Yeayy! Login Berhasil Cuy, selamat datang " + nama)
 
     biaya_langganan = 1500000
@@ -13,9 +13,9 @@ if nama == "Tofa Suwarna" and nim == ("37"):
     print("2. Paket Nebula (Admin 3%) - Akses premium & playlist")
     print("3. Paket Galaxy (Admin 5%) - Akses premium, playlist & offline")
     print("4. Paket Supernova (Admin 7%) - Semua fitur & konten eksklusif")
-    print("■■■■□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□")
+    print("□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□")
 
-    pilihan=input("PILIH PAKET ANGKASA (1/2/3/4): ")
+    pilihan = input("\n PILIH PAKET ANGKASA (1/2/3/4): ")
 
     if pilihan == "1":
         paket = "Orbit"
@@ -34,9 +34,9 @@ if nama == "Tofa Suwarna" and nim == ("37"):
         admin = 0.07
         fitur = "Akses semua fitur, playlist kustom, mode offline, dan konten eksklusif artis"
     else:
-        print("Waduh, nggak ada pilihannya di menu!")
-   
-        
+        print("\n Waduh, nggak ada pilihannya di menu wak!")
+        exit()
+
     biaya_admin = int(biaya_langganan * admin)
     total_bayar = int(biaya_langganan) + int(biaya_langganan * admin)
 
@@ -50,9 +50,13 @@ if nama == "Tofa Suwarna" and nim == ("37"):
     print(f"Biaya Admin      : Rp {biaya_admin}")
     print("------------------------------------------+")
     print(f"TOTAL BAYAR      : Rp {total_bayar}")
-    print("=====================================================================================================")
+    print(
+        "====================================================================================================="
+    )
     print(f"Fitur yang Didapat    : {fitur}")
-    print("=====================================================================================================")
+    print(
+        "====================================================================================================="
+    )
 
 else:
     print("\n ---- T-T Yaaah.. login gagal. Nama atau NIM ada yang salah tuh. T-T ----")
